@@ -27,5 +27,4 @@ jobs:
         ${{ secrets.SSH_PRIVATE_KEY }}
         EOF
         chmod 600 ~/vm.pem
-        scp -i ~/vm.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $PACKAGE_FILENAME ${{ secrets.SSH_USER_NAME }}@${{ secrets.BASTION_IP }}:/deployment/nodeJs/dev_playscripts_vm
-
+        scp -i ~/vm.pem -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $PACKAGE_FILENAME ${{ secrets.SSH_USER_NAME }}@${{ secrets.BASTION_IP }}:/home/blAzureUser/blProject
